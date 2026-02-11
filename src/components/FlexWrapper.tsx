@@ -8,8 +8,6 @@ type FlexWrapperPropsType = {
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
-    background-color: #ccae89;
-    text-align: start;
     display: flex;
     flex-direction: ${props => props.direction || "row"};
     justify-content: ${props => props.justify || "flex-start"};

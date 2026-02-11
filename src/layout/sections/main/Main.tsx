@@ -4,9 +4,9 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
 export const Main = () => {
     return (
-        <div>
+        <StyledMain>
             <FlexWrapper align={"center"} justify={"space-around"}>
-                <div>
+                <TextBlock>
                     <h1>React developer</h1>
                     <h2>Nikolay Gruzd</h2>
                     <span>
@@ -14,12 +14,21 @@ export const Main = () => {
                         learning to touch type has to do with writing poetry" - Ted Nelson
                     </span> <br/>
                     <button>Contact Me</button>
-                </div>
+                </TextBlock>
                 <Photo src={photo} alt="Photo"/>
             </FlexWrapper>
-        </div>
+        </StyledMain>
     );
 };
+
+const StyledMain = styled.div`
+    background-color: #ccae89;
+    min-height: 100vh;
+`
+
+const TextBlock = styled.div`
+
+`
 
 const Photo = styled.img`
     width: 570px;
