@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import photo from "../../../assets/images/photoBright.svg";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Icon} from "../../../components/icon/Icon.tsx";
 
 export const Main = () => {
     return (
@@ -17,6 +18,7 @@ export const Main = () => {
                 </TextBlock>
                 <Photo src={photo} alt="Photo"/>
             </FlexWrapper>
+            <Icon iconId={"arrowScroll"}/>
         </StyledMain>
     );
 };
