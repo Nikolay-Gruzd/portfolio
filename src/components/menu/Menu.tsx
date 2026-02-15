@@ -1,28 +1,25 @@
 import styled from "styled-components";
 import {Logo} from "../logo/Logo.tsx";
 
-export const Menu = () => {
+type MenuPropsType = {
+    menuItems: Array<string>
+}
+
+export const Menu = (props: MenuPropsType) => {
     return (
-        <StyledMenu>
+        <StyledMenu menuItems={props.menuItems}>
                 <ul>
-                    <li>
-                        <Logo/>
-                    </li>
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Projects</a>
-                    </li>
-                    <li>
-                        <a href="">Contact</a>
-                    </li>
+                    { props.menuItems.map((item, index) => {
+                        if ( item === "<Logo/>") {
+                            return <li key={index}><a href=""><Logo/></a></li>
+                        } else return <li key={index}><a href="">{item}</a></li>
+                    }) }
                 </ul>
         </StyledMenu>
     );
 };
 
-const StyledMenu = styled.nav`
+const StyledMenu = styled.nav<MenuPropsType>`
     width: 100%;
     
     ul {
@@ -32,7 +29,7 @@ const StyledMenu = styled.nav`
     }
 
     li:nth-child(2) {
-        margin-right: auto;        
+        margin-right: ${props => props.menuItems && props.menuItems.includes("<Logo/>") ? "auto" : "0"};        
     }
 
 `
