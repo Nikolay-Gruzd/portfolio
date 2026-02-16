@@ -8,8 +8,8 @@ export const Skills = () => {
         <StyledSkills>
             <SectionTitle>Skills</SectionTitle>
             <FlexWrapper wrap={"wrap"} justify={"center"}>
-                <Skill iconId={"javascript"} title={"javascript"} viewBox={"0 0 115 115"}/>
-                <Skill iconId={"git"} title={"git"} viewBox={"0 0 256 256"}/>
+                <Skill iconId={"javascript"} title={"javascript"} viewBox={"0 0 125 125"}/>
+                <Skill iconId={"git"} title={"git"} viewBox={"0 0 125 125"}/>
             </FlexWrapper>
         </StyledSkills>
     );
