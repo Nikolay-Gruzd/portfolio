@@ -40,6 +40,10 @@ export const GlobalStyled = createGlobalStyle`
     }
     
     section{
+        padding-bottom: 140px;
         background-color: ${theme.colors.primaryBG};
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 `
