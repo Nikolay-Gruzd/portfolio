@@ -5,10 +5,13 @@ type FlexWrapperPropsType = {
     justify?: string;
     align?: string;
     wrap?: string;
+    position?: string;
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     display: flex;
+    height: 100%;
+    position: ${props => props.position || null};
     flex-direction: ${props => props.direction || "row"};
     justify-content: ${props => props.justify || "flex-start"};
     align-items: ${props => props.align || "stretch"};
