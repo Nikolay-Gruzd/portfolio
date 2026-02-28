@@ -1,21 +1,21 @@
 import styled from "styled-components";
-import {Menu} from "../../components/menu/Menu.tsx";
 import {Container} from "../../components/Container.ts";
+import {theme} from "../../styles/Theme.ts";
+import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
 
-const headerItems = ["<Logo/>", "Home", "Projects", "Contact"]
+const headerItems = ["Home", "Projects", "Contact"]
 
 export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <Menu menuItems={headerItems}/>
+                <HeaderMenu menuItems={headerItems}/>
             </Container>
         </StyledHeader>
     );
 };
 
 const StyledHeader = styled.header`
-    background-color: #ffa2a2;
-    display: flex;
-    align-items: center;
+    background-color: ${theme.colors.primaryBG};
+    padding: 28px 0;
 `
