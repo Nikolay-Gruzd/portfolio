@@ -70,7 +70,7 @@ const Text = styled.p`
 const Link = styled.a`
     text-align: center;
     position: absolute;
-    bottom: 7vh;                   /* Отступ от низа */
+    bottom: 0;                      /* Отступ от низа */
     left: 50%;                      /* Сдвиг начала элемента к центру */
     transform: translateX(-50%);    /* Сдвиг элемента на 50% его собственной ширины влево для идеального центра */
 `
