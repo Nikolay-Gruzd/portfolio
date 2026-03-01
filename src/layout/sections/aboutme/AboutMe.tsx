@@ -23,9 +23,7 @@ export const AboutMe = () => {
     );
 };
 
-const StyledAboutMe = styled.section`
-    min-height: 30vh;
-`
+const StyledAboutMe = styled.section``
 
 const TextBlock = styled.div`
     max-width: 843px;
@@ -37,11 +35,13 @@ const TextBlock = styled.div`
 
 const TextBlockContainer = styled.div`
     position: relative;
+    
 `
 
 const VerticalLine = styled.span`
-    content: "";
     position: absolute;
+    
+    content: "";
     left: 0; // прижимаем к левому краю 
     top: 5px; // отступ сверху (немного отступа от начала текста) 
     bottom: 5px; // отступ снизу (немного не доходит до конца)

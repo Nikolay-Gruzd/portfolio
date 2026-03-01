@@ -9,9 +9,9 @@ export const GlobalStyled = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
-    
+
     body {
-        margin: 0;        
+        margin: 0;
         font-family: "Montserrat", "Tinos", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -25,25 +25,35 @@ export const GlobalStyled = createGlobalStyle`
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
     }
-    
-    a{
+
+    a {
         text-decoration: none;
     }
-    
-    ul{
+
+    ul {
         list-style: none;
     }
-    
-    button{
+
+    button {
         background-color: unset;
         border: none;
     }
-    
-    section{
+
+    section {
         padding-bottom: 140px;
         background-color: ${theme.colors.primaryBG};
-        &:last-child{
+
+        &:last-child {
             margin-bottom: 0;
         }
+    }
+
+    //Для видимости блоков
+    section:nth-child(odd) {
+        background-color: #bfc0cd;
+    }
+
+    section:nth-child(even) {
+        background-color: #9a9ba6;
     }
 `

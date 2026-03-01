@@ -8,6 +8,7 @@ type propsType = {
 export const Button = styled.a<propsType>`
     display: block;
     width: ${props => (props.width ? props.width : "fit-content")};
+    font-size: 16px;
     text-align: center;
     padding: 13px 20px;
     border-radius: 6px;

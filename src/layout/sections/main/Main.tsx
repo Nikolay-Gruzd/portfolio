@@ -64,6 +64,7 @@ const TextBlock = styled.div`
 
 const Text = styled.p`
     font-weight: 400;
+    font-size: 16px;
     letter-spacing: 4%;
 `
 
