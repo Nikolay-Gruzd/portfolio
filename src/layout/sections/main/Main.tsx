@@ -19,7 +19,7 @@ export const Main = () => {
                                 "Learning to program has no more to do with designing interactive software than
                                 learning to touch type has to do with writing poetry" - Ted Nelson
                             </Text>
-                            <Button href={"#"}>Contact Me</Button>
+                            <Button>Contact Me</Button>
                         </TextBlock>
                         <Photo src={photo} alt="Photo"/>
                     </FlexWrapper>
