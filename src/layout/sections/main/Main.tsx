@@ -10,22 +10,24 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper position={"relative"} direction={"column"}>
-                    <FlexWrapper  align={"center"} justify={"space-between"}>
-                        <TextBlock>
-                            <MainTitle>React developer</MainTitle>
-                            <Name>Nikolay Gruzd</Name>
-                            <Text>
-                                "Learning to program has no more to do with designing interactive software than
-                                learning to touch type has to do with writing poetry" - Ted Nelson
-                            </Text>
-                            <Button>Contact Me</Button>
-                        </TextBlock>
-                        <Photo src={photo} alt="Photo"/>
-                    </FlexWrapper>
-                    <Link href="#">
-                        <Icon iconId={"arrowScroll"}/>
-                    </Link>
+                <FlexWrapper align={"center"} justify={"space-between"}>
+                    <MainWrapper>
+                        <FlexWrapper align={"center"} justify={"space-between"}>
+                            <TextBlock>
+                                <MainTitle>React developer</MainTitle>
+                                <Name>Nikolay Gruzd</Name>
+                                <Text>
+                                    "Learning to program has no more to do with designing interactive software than
+                                    learning to touch type has to do with writing poetry" - Ted Nelson
+                                </Text>
+                                <Button>Contact Me</Button>
+                            </TextBlock>
+                            <Photo src={photo} alt="Photo"/>
+                            <Link href="#">
+                                <Icon iconId={"arrowScroll"}/>
+                            </Link>
+                        </FlexWrapper>
+                    </MainWrapper>
                 </FlexWrapper>
             </Container>
         </StyledMain>
@@ -35,6 +37,10 @@ export const Main = () => {
 const StyledMain = styled.section`
     display: flex;
     min-height: 100vh;
+`
+
+const MainWrapper = styled.div`
+    position: relative;
 `
 
 const MainTitle = styled.h1`
@@ -71,9 +77,9 @@ const Text = styled.p`
 const Link = styled.a`
     text-align: center;
     position: absolute;
-    bottom: 0;                      /* Отступ от низа */
-    left: 50%;                      /* Сдвиг начала элемента к центру */
-    transform: translateX(-50%);    /* Сдвиг элемента на 50% его собственной ширины влево для идеального центра */
+    bottom: -65px; /* Отступ от низа */
+    left: 50%; /* Сдвиг начала элемента к центру */
+    transform: translateX(-50%); /* Сдвиг элемента на 50% его собственной ширины влево для идеального центра */
 `
 
 const Photo = styled.img`
