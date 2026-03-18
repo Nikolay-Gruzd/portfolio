@@ -1,63 +1,98 @@
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {theme} from "../../styles/Theme.ts";
+import {Container} from "../../components/Container.ts";
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FlexWrapper direction="column" align="center">
-                <SocialList>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon iconId={"gmail"}/>
-                            <SocialText>Gmail</SocialText>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon iconId={"telegram"}/>
-                            <SocialText>Telegram</SocialText>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon iconId={"github"}/>
-                            <SocialText>Github</SocialText>
-                        </SocialLink>
-                    </SocialItem>
-                </SocialList>
-                <FlexWrapper justify={"space-between"}>
-                    <SocialLink>Projects</SocialLink>
-                    <SocialLink>Contact</SocialLink>
+            <Container>
+                <FlexWrapper direction="column" align="center" gap={"50px"}>
+                    <SocialList>
+                        <SocialItem>
+                            <SocialLink href="#">
+                                <Icon iconId={"gmail"} width={"38"} height={"38"} viewBox={"0 0 39 39"}/>
+                                <SocialText>Gmail</SocialText>
+                            </SocialLink>
+                        </SocialItem>
+                        <SocialItem>
+                            <SocialLink href="#">
+                                <Icon iconId={"telegram"} width={"38"} height={"38"} viewBox={"0 0 39 39"}/>
+                                <SocialText>Telegram</SocialText>
+                            </SocialLink>
+                        </SocialItem>
+                        <SocialItem>
+                            <SocialLink href="#">
+                                <Icon iconId={"github"} width={"38"} height={"38"} viewBox={"0 0 39 39"}/>
+                                <SocialText>Github</SocialText>
+                            </SocialLink>
+                        </SocialItem>
+                    </SocialList>
+                    <BoxSocial>
+                        <SocialLink href="#">Projects</SocialLink>
+                        <SocialLink href="#">Contact</SocialLink>
+                    </BoxSocial>
+                    <CopyRight>© 2026 Nikolay Gruzd, All Rights Reserved.</CopyRight>
                 </FlexWrapper>
-                <CopyRight>© 2026 Nikolay Gruzd, All Rights Reserved.</CopyRight>
-            </FlexWrapper>
+            </Container>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.div`
-    background-color: #3c92cc;
-    min-height: 30vh;
+    background-color: ${theme.colors.primaryBG};
+    padding: 50px 0 100px;
+
+    p, small {
+        text-transform: uppercase;
+    }
+`
+
+const BoxSocial = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
 `
 
 const SocialList = styled.ul`
     display: flex;
-    gap: 30px;
+    gap: 100px;
 `
 
 const SocialItem = styled.li`
-
+    position: relative;
 `
 
 const SocialLink = styled.a`
-    gap: 30px;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    
+    svg {
+        color: ${theme.colors.accent}
+    }
+    
+    &:hover svg{
+        color: ${theme.colors.hoverAccent}
+    }
 `
 
 const SocialText = styled.p`
+    position: absolute;
     
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 12%;
+
 `
 
 const CopyRight = styled.small`
-
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
 `

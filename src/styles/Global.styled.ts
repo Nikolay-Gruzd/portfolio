@@ -52,11 +52,11 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     //Для видимости блоков
-    section:nth-child(odd) {
-        background-color: #bfc0cd;
-    }
-
-    section:nth-child(even) {
-        background-color: #9a9ba6;
-    }
+    //section:nth-child(odd) {
+    //    background-color: #bfc0cd;
+    //}
+    //
+    //section:nth-child(even) {
+    //    background-color: #9a9ba6;
+    //}
 `
