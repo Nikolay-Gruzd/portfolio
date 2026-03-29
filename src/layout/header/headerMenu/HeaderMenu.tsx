@@ -23,7 +23,7 @@ const StyledHeaderMenu = styled.nav<MenuPropsType>`
     width: 100%;
 
     ul {
-        gap: 5px;
+        gap: 10px;
         display: flex;
         align-items: center;
     }
@@ -34,11 +34,32 @@ const StyledHeaderMenu = styled.nav<MenuPropsType>`
     
     li:last-child a{
         display: block;
-        margin-left: 90px;
+        margin-left: 85px;
         padding: 13px 20px;
         border-radius: 6px;
         background-color: ${theme.colors.accent};
         color: ${theme.colors.primaryBG};
+    }
+    
+    @media ${theme.media.tablet} {
+        ul {
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li:first-child {
+            margin-right: 0;
+        }
+
+        li:last-child a {
+            margin-left: 0;
+        }
+    }
+    
+    @media ${theme.media.mobile} {
+
     }
 `
 

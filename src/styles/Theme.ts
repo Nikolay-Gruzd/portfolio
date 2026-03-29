@@ -10,5 +10,10 @@ export const theme = {
         font: "#1F2626",
 
         placeholderColor: "#919B9B",
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 568px)",
     }
 }
