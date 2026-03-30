@@ -49,6 +49,10 @@ export const GlobalStyled = createGlobalStyle`
         &:last-child {
             margin-bottom: 0;
         }
+        
+        @media ${theme.media.tablet} {
+            padding-bottom: 100px;                        
+        }
     }
 
     //Для видимости блоков
