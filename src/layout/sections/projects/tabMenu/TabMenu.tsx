@@ -23,7 +23,7 @@ const StyledTabMenu = styled.nav<MenuPropsType>`
     width: 100%;
 
     ul {
-        gap: 30px;
+        gap: 20px;
         display: flex;
         align-items: center;
     }       
@@ -40,6 +40,7 @@ const Link = styled.a`
     line-height: 20px;
     letter-spacing: 0;
     text-transform: uppercase;
+    white-space: nowrap;
     
     &:hover{
         color: ${theme.colors.accent}        
