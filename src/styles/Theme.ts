@@ -13,8 +13,8 @@ export const theme = {
     },
 
     media: {
-        tablet: "screen and (max-width: 920px)",
-        bigTablet: "screen and (max-width: 1084px)",
+        tablet: "screen and (max-width: 935px)",
+        bigTablet: "screen and (max-width: 1099px)",
         mobile: "screen and (max-width: 568px)",
     }
 }

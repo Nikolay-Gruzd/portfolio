@@ -26,24 +26,22 @@ export const Projects = () => {
                                  "nostrud amet."}
                     />
                     <Project technologies={technologiesItems} title={"Project 2"} src={projectImage} text={"text 2"}/>
-                    <Button>SEE ALL PROJECTS</Button>
+                    <ButtonBox>
+                        <Button width={"305px"}>SEE ALL PROJECTS</Button>
+                    </ButtonBox>
                 </FlexWrapper>
             </Container>
         </StyledProjects>
     );
 };
 
-const StyledProjects = styled.section`
-    ${Button} {
-        display: none;
-        width: 305px;
-        height: 56px;
-        margin: 30px 40px 0 40px;
-    }
-    
+const StyledProjects = styled.section``
+
+const ButtonBox = styled.div`
+    display: none;
+    margin: 30px 40px 0 40px;
+
     @media ${theme.media.tablet} {
-        ${Button} {
-            display: unset;
-        }
+        display: unset;
     }
 `
