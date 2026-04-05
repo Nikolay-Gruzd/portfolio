@@ -27,8 +27,8 @@ const StyledSkill = styled.div`
     height: 165px;
     
     @media ${theme.media.tablet} {
-        width: 95px;
-        height: 145px;
+        width: 90px;
+        height: 140px;
     }
 `
 
