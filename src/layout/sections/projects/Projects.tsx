@@ -5,6 +5,8 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Project} from "./project/Project.tsx";
 import {Container} from "../../../components/Container.ts";
 import {TabMenu} from "./tabMenu/TabMenu.tsx";
+import {Button} from "../../../components/Button.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 const projectsItems = ["All", "Lending page", "React", "spa"]
 const technologiesItems = ["Javascript", "React", "PostgreSQL", "Redux"];
@@ -15,7 +17,7 @@ export const Projects = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <TabMenu menuItems={projectsItems}/>
-                <FlexWrapper justify={"space-between"} wrap={"wrap"}>
+                <FlexWrapper justify={"space-evenly"} wrap={"wrap"} gap={"10px"}>
                     <Project technologies={technologiesItems}
                              title={"Project 1"}
                              src={projectImage}
@@ -24,10 +26,24 @@ export const Projects = () => {
                                  "nostrud amet."}
                     />
                     <Project technologies={technologiesItems} title={"Project 2"} src={projectImage} text={"text 2"}/>
+                    <Button>SEE ALL PROJECTS</Button>
                 </FlexWrapper>
             </Container>
         </StyledProjects>
     );
 };
 
-const StyledProjects = styled.section``
+const StyledProjects = styled.section`
+    ${Button} {
+        display: none;
+        width: 305px;
+        height: 56px;
+        margin: 30px 40px 0 40px;
+    }
+    
+    @media ${theme.media.tablet} {
+        ${Button} {
+            display: unset;
+        }
+    }
+`

@@ -19,7 +19,7 @@ export const Project = (props: ProjectPropsType) => {
             </ImageWrapper>
             <TextBlock>
                 <Title>{props.title}</Title>
-                <FlexWrapper>
+                <FlexWrapper wrap={"wrap"} gap={"12px"}>
                     {props.technologies.map((item, index) => (
                         <Technology key={index}>{item}</Technology>
                     ))}
@@ -38,9 +38,16 @@ const StyledProject = styled.div`
     overflow: hidden;
     max-width: 522px;
     width: 100%;
-    height: 100%;
     margin-top: 30px;
-    box-shadow: 2px 2px 32px 0 rgba(40, 38, 44, 0.15);     
+    box-shadow: 2px 2px 32px 0 rgba(40, 38, 44, 0.15);  
+    
+    @media ${theme.media.bigTablet} {
+        max-width: 440px;
+    }
+
+    @media ${theme.media.tablet} {
+        max-width: 522px;
+    }
 `
 
 const TextBlock = styled.div`
@@ -78,12 +85,12 @@ const ImageWrapper = styled.div`
 
 const Image = styled.img`
     width: 100%;
-    height: 388px;
+    max-width: 522px;
     object-fit: cover;
 `
 
 const Text = styled.p`
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 4%;
@@ -93,10 +100,10 @@ const Title = styled.h3`
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 0;
+    margin-bottom: 12px;
 `
 
 const Technology = styled.p`
-    margin: 12px 0;
     border-radius: 4px;
     color: #DBFFFF;
     background-color: ${theme.colors.accent};
@@ -105,9 +112,5 @@ const Technology = styled.p`
     font-weight: 400;
     letter-spacing: 12%;
     text-transform: uppercase;
-
-    & + p {
-        margin-left: 12px;
-    }
 `
 
