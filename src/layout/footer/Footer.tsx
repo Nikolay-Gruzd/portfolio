@@ -12,19 +12,19 @@ export const Footer = () => {
                     <SocialList>
                         <SocialItem>
                             <SocialLink href="#">
-                                <Icon iconId={"gmail"} width={"38"} height={"38"} viewBox={"0 0 39 39"}/>
+                                <Icon iconId={"gmail"} width={"38px"} height={"38px"} viewBox={"0 0 39 39"}/>
                                 <SocialText>Gmail</SocialText>
                             </SocialLink>
                         </SocialItem>
                         <SocialItem>
                             <SocialLink href="#">
-                                <Icon iconId={"telegram"} width={"38"} height={"38"} viewBox={"0 0 39 39"}/>
+                                <Icon iconId={"telegram"} width={"38px"} height={"38px"} viewBox={"0 0 39 39"}/>
                                 <SocialText>Telegram</SocialText>
                             </SocialLink>
                         </SocialItem>
                         <SocialItem>
                             <SocialLink href="#">
-                                <Icon iconId={"github"} width={"38"} height={"38"} viewBox={"0 0 39 39"}/>
+                                <Icon iconId={"github"} width={"38px"} height={"38px"} viewBox={"0 0 39 39"}/>
                                 <SocialText>Github</SocialText>
                             </SocialLink>
                         </SocialItem>
@@ -72,7 +72,9 @@ const SocialLink = styled.a`
     letter-spacing: 0;
     
     svg {
-        color: ${theme.colors.accent}
+        color: ${theme.colors.accent};
+        width: 38px;
+        height: 38px;
     }
     
     &:hover svg{
@@ -83,6 +85,7 @@ const SocialLink = styled.a`
 const SocialText = styled.p`
     position: absolute;
     
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 12px;
