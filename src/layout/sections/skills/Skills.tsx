@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
+import {theme} from "../../../styles/Theme.ts";
 
 const skillData = [
     {iconId: "javascript", title: "javascript"},
@@ -25,7 +25,7 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <SectionTitle>Skills</SectionTitle>
-                <FlexWrapper wrap={"wrap"} justify={"center"} gap={"30px 115px"} >
+                <BlockWrapper>
                     { skillData.map((skill) => (
                         <Skill iconId={skill.iconId}
                                title={skill.title}
@@ -34,12 +34,22 @@ export const Skills = () => {
                                viewBox={"0 0 120 120"}
                         />
                     )) }
-                </FlexWrapper>
+                </BlockWrapper>
             </Container>
         </StyledSkills>
     );
 };
 
-const StyledSkills = styled.section`
+const StyledSkills = styled.section``
 
+const BlockWrapper = styled.div`
+    display: flex;
+    height: 100%;
+    gap: 30px 115px;
+    justify-content: center;
+    flex-wrap: wrap;  
+    
+    @media ${theme.media.tablet} {
+        gap: 30px 45px;
+    }
 `

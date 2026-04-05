@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon.tsx";
+import {theme} from "../../../../styles/Theme.ts";
 
 type SkillPropsType = {
     iconId: string
@@ -20,10 +21,15 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
+    position: relative;
+    
     width: 120px;
     height: 165px;
-
-    position: relative;
+    
+    @media ${theme.media.tablet} {
+        width: 95px;
+        height: 145px;
+    }
 `
 
 const SkillTitle = styled.p`
@@ -38,4 +44,10 @@ const SkillTitle = styled.p`
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+
+    @media ${theme.media.tablet} {
+        white-space: wrap;
+        font-size: 12px;
+        bottom: 20px;
+    }
 `
