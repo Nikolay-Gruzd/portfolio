@@ -110,6 +110,11 @@ const Link = styled.a`
     left: 50%; /* Сдвиг начала элемента к центру */
     transform: translateX(-50%); /* Сдвиг элемента на 50% его собственной ширины влево для идеального центра */
     
+    svg {
+        width: 50px;
+        height: 50px;        
+    }
+    
     @media ${theme.media.bigTablet} {
         display: none;
     }
