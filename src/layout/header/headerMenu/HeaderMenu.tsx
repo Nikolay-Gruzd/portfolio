@@ -43,16 +43,9 @@ const StyledHeaderMenu = styled.nav<MenuPropsType>`
     
     @media ${theme.media.tablet} {
         ul {
-            gap: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            gap: 30px;
         }
-
-        li:first-child {
-            margin-right: 0;
-        }
-
+        
         li:last-child a {
             margin-left: 0;
         }
